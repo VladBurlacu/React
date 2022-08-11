@@ -1,5 +1,9 @@
-const Question = () => {
-    return <div>Question</div>
+const Questions = () => {
+    return (
+        <div>
+            Questions
+        </div>
+    )
 }
 
-export default Question;
+export default Questions;
