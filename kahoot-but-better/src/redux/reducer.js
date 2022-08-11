@@ -1,0 +1,43 @@
+import {CHANGE_AMOUNT, CHANGE_CATEGORY, CHANGE_DIFFICULTY, CHANGE_SCORE, CHANGE_TYPE} from "./actionTypes";
+
+const initialState = {
+    question_category: "",
+    question_difficulty: "",
+    question_type: "",
+    amount_of_questions: 20,
+    score: 0
+}
+
+const reducer = (state = initialState, actions) => {
+    switch(action.type) {
+        case CHANGE_CATEGORY:
+            return {
+                ...this.state.,
+                question_category: action.payload,
+            };
+        case CHANGE_DIFFICULTY:
+            return {
+                ...this.state.,
+                question_difficulty: action.payload,
+            };
+        case CHANGE_TYPE:
+            return {
+                ...this.state.,
+                question_type: action.payload,
+            };
+        case CHANGE_AMOUNT:
+            return {
+                ...this.state.,
+                amount_of_questions: action.payload,
+            };
+        case CHANGE_SCORE:
+            return {
+                ...this.state,
+                score: action.payload,
+            };
+        default:
+            return state;
+    }
+}
+
+export default reducer;

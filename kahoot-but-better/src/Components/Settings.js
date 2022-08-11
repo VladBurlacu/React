@@ -2,11 +2,12 @@ import SelectField from "./SelectField";
 import {Box, Button, CircularProgress, Typography} from "@mui/material";
 import TextFieldComp from "./TextFieldComp";
 import useAxios from "../hooks/useAxios";
+import {useHistory} from "react-router-dom";
 
 
 const Settings = () => {
     const { response, error, loading} = useAxios({ url: "/api_category.php" })
-
+    const history = useHistory();
     if(loading) {
         return (
             <Box mt={20}>
@@ -36,6 +37,7 @@ const Settings = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        history.push("/questions")
 
     }
 
