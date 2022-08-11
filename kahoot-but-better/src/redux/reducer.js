@@ -8,26 +8,26 @@ const initialState = {
     score: 0
 }
 
-const reducer = (state = initialState, actions) => {
+const reducer = (state = initialState, action) => {
     switch(action.type) {
         case CHANGE_CATEGORY:
             return {
-                ...this.state.,
+                ...this.state,
                 question_category: action.payload,
             };
         case CHANGE_DIFFICULTY:
             return {
-                ...this.state.,
+                ...this.state,
                 question_difficulty: action.payload,
             };
         case CHANGE_TYPE:
             return {
-                ...this.state.,
+                ...this.state,
                 question_type: action.payload,
             };
         case CHANGE_AMOUNT:
             return {
-                ...this.state.,
+                ...this.state,
                 amount_of_questions: action.payload,
             };
         case CHANGE_SCORE:
